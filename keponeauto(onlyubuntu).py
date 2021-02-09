@@ -164,6 +164,7 @@ list_of_files.remove('LPdata '+str(datetime.today().year)+'-'+str(datetime.today
 list_of_files.remove('keponeauto(testwindow).py')
 latest_file = max(list_of_files, key=os.path.getctime)
 print(latest_file)
+
 if latest_file=='jmeter.log':
 	shutil.move(latest_file,epath)
 	epath =os.getcwd()+'/LPdata '+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day) # 결과가 저장될 폴더
@@ -175,6 +176,8 @@ if latest_file=='jmeter.log':
 	list_of_files.remove('LPdata '+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day))
 	list_of_files.remove('keponeauto(testwindow).py')
 	latest_file = max(list_of_files, key=os.path.getctime)
+	print("next latest_file is")
+	print(latest_file)
 
 glp(latest_file,tfile)
 shutil.move(latest_file,epath)
