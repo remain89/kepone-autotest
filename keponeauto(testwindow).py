@@ -43,26 +43,8 @@ def printall(ertype,mid,day,num,tfile) :
 		tfile.write('----------------------------------------------------------------------\n\n')	   
 
 def glp(fname,tfile): #G,AE,S타입 LP검침
+
 	data=pd.read_excel(fname)
-	data=data.replace(['"','='],['',''],regex=True) # 특수문자 제거
-	data2=data[["계기번호","검침시간","순방향유효전력","순방향지상무효전력","순방향진상무효전력","피상전력","역방향유효전력","역방향지상무효전력","역방향진상무효전력","역방향피상전력"]]
-	data2.rename(columns={'순방향유효전력':'FEP'},inplace=True) #이하 처리를 위한 행제목 변경
-	data2.rename(columns={'순방향지상무효전력':'LARAP'},inplace=True)
-	data2.rename(columns={'순방향진상무효전력':'LERAP'},inplace=True)
-	data2.rename(columns={'피상전력':'AP'},inplace=True)
-	data2.rename(columns={'역방향유효전력':'APA'},inplace=True)	   
-	data2.rename(columns={'역방향지상무효전력':'APB'},inplace=True)
-	data2.rename(columns={'역방향진상무효전력':'APC'},inplace=True)	   
-	data2.rename(columns={'역방향피상전력':'APD'},inplace=True)
-	data2.rename(columns={'계기번호':'MeterID'},inplace=True)
-	data2.rename(columns={'검침시간':'CTime'},inplace=True)
-	data2['FEP']=pd.to_numeric(data2['FEP'],errors='coerce')
-	data2['MeterID']=data2['MeterID'].astype(str)   
-	print('location5\n')
-	
-	#
-	
-	data=pd.read_excel(fname[0])
 	data=data.replace(['"','='],['',''],regex=True) # 특수문자 제거
 	data2=data[["계기번호","모뎀번호","검침일","순방향 유효전력량(KWH)","지상 무효전력량(KVARH)","진상 무효전력량(KVARH)","수요전력","지상 역률","진상 역률","수신시간"]]
 	data2.rename(columns={'순방향 유효전력량(KWH)':'FEP'},inplace=True) #이하 처리를 위한 행제목 변경
@@ -75,8 +57,6 @@ def glp(fname,tfile): #G,AE,S타입 LP검침
 	data2.rename(columns={'수신시간':'RTime'},inplace=True)
 	data2['FEP']=pd.to_numeric(data2['FEP'],errors='coerce')
 	data2['MeterID']=data2['MeterID'].astype(str)   
-	
-	#
 	   
 	data6=data2.drop_duplicates('MeterID',keep='first') # 미터정보만 남김
 	data6.MeterID.count() #전체 미터 갯수
@@ -99,9 +79,7 @@ def glp(fname,tfile): #G,AE,S타입 LP검침
 		bvalue=bcheck(data8.FEP.values,o)
 		print(svalue)		   
 		print(bvalue)		   
-		kk=bvalue-svalue
-		if(bvalue==0 & svalue==0):
-			kk=-1			
+		kk=bvalue-svalue		
 		for j in range(0,data7.CTime.count()):   # 아래의 경우 2*o로 사용가능 
 			data8=data2[(data2.MeterID==data6.MeterID[i])]
 			data8=data8.sort_values(by='FEP',ascending=True)
@@ -176,11 +154,19 @@ file_list=epath+'/'+file_list
 os.remove(latest_file)	 # 작업한 프로그램 삭제
 '''
 
-epath =os.getcwd()+'/LPdata '+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day) # 결과가 저장될 폴더
-filename=epath+'/'+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day)+'-'+'분석 결과.txt'
+epath =os.getcwd()+'\\LPdata '+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day) # 결과가 저장될 폴더
+os.makedirs(os.path.join(epath))
+filename=epath+'\\'+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day)+'-'+'분석 결과.txt'
 tfile = open(filename, mode='wt', encoding='utf-8')
 
-glp(file_list,tfile)
+list_of_files=os.listdir(os.getcwd())
+list_of_files.remove('LPdata '+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day))
+list_of_files.remove('keponeauto(testwindow).py')
+latest_file = max(list_of_files, key=os.path.getctime)
+print(latest_file)
+
+glp(latest_file,tfile)
+shutil.move(latest_file,epath)
 
 while True:
 	#print('while문 진입\n\n')
@@ -193,7 +179,8 @@ while True:
 	print('level2')
 	print(latest_file+'\n')
 	print(latest_file[-12:]+'\nlocation2\n')
-	if latest_file[-3:]!='xls' :  #가장 최근파일의 확장자가 octet-stream이 아닌경우에 와일문 종료
+#	if latest_file[-3:]!='xls' :  #가장 최근파일의 확장자가 octet-stream이 아닌경우에 와일문 종료
+	if latest_file[-3:]!='eam' :  #가장 최근파일의 확장자가 octet-stream이 아닌경우에 와일문 종료
 		print('location3\n')
 		break
 	'''
