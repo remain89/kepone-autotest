@@ -164,6 +164,7 @@ list_of_files.remove('LPdata '+str(datetime.today().year)+'-'+str(datetime.today
 list_of_files.remove('keponeauto(testwindow).py')
 list_of_files.remove('keponeauto(onlyubuntu).py')
 list_of_files.remove('jmeter.log')
+list_of_files.remove('testkepone.jtl')
 latest_file = max(list_of_files, key=os.path.getctime)
 print(latest_file)
 
