@@ -176,6 +176,10 @@ while True:
 	#print('while문 진입\n\n')
 	#list_of_files = glob.glob(os.getcwd()) # octet-stream파일이 저장되는 경로를 지정
 	list_of_files=os.listdir(os.getcwd())
+	list_of_files.remove('keponeauto(testwindow).py')
+	list_of_files.remove('keponeauto(onlyubuntu).py')
+	list_of_files.remove('jmeter.log')
+	list_of_files.remove('testkepone.jtl')
 	print(list_of_files)
 	list_of_files.remove('LPdata '+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day))
 	
