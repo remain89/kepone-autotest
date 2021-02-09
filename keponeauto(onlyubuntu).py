@@ -164,6 +164,17 @@ list_of_files.remove('LPdata '+str(datetime.today().year)+'-'+str(datetime.today
 list_of_files.remove('keponeauto(testwindow).py')
 latest_file = max(list_of_files, key=os.path.getctime)
 print(latest_file)
+if latest_file=='jmeter.log':
+	shutil.move(latest_file,epath)
+	epath =os.getcwd()+'/LPdata '+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day) # 결과가 저장될 폴더
+	os.makedirs(os.path.join(epath))
+	filename=epath+'/'+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day)+'-'+'분석 결과.txt'
+	tfile = open(filename, mode='wt', encoding='utf-8')
+
+	list_of_files=os.listdir(os.getcwd())
+	list_of_files.remove('LPdata '+str(datetime.today().year)+'-'+str(datetime.today().month)+'-'+str(datetime.today().day))
+	list_of_files.remove('keponeauto(testwindow).py')
+	latest_file = max(list_of_files, key=os.path.getctime)
 
 glp(latest_file,tfile)
 shutil.move(latest_file,epath)
