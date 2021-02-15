@@ -39,9 +39,10 @@
             <stringProp name="-126857283">wait_time4</stringProp>
             <stringProp name="-5419044">Modem_no2</stringProp>
             <stringProp name="-5419043">Modem_no3</stringProp>
+            <stringProp name="-1621979774">yesterday</stringProp>
           </collectionProp>
           <collectionProp name="UserParameters.thread_values">
-            <collectionProp name="1907062757">
+            <collectionProp name="2012381853">
               <stringProp name="92668751">admin</stringProp>
               <stringProp name="-1738440832">nuri1234</stringProp>
               <stringProp name="1076881491">47-190009185</stringProp>
@@ -54,6 +55,7 @@
               <stringProp name="1505893341">300000</stringProp>
               <stringProp name="-631908748">01228442252</stringProp>
               <stringProp name="-631820243">01228445182</stringProp>
+              <stringProp name="888166826">${__timeShift(yyyyMMdd,,-P1D,yesterday)}</stringProp>
             </collectionProp>
           </collectionProp>
           <boolProp name="UserParameters.per_iteration">false</boolProp>
@@ -189,28 +191,28 @@
               </elementProp>
               <elementProp name="fromDateInSearchHour" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                <stringProp name="Argument.value">${yesterday}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">fromDateInSearchHour</stringProp>
               </elementProp>
               <elementProp name="fromDateInSearchInterval" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                <stringProp name="Argument.value">${yesterday}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">fromDateInSearchInterval</stringProp>
               </elementProp>
               <elementProp name="fromDateInSearchPeriod" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                <stringProp name="Argument.value">${yesterday}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">fromDateInSearchPeriod</stringProp>
               </elementProp>
               <elementProp name="fromDateInSearchSectionInterval" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                <stringProp name="Argument.value">${yesterday}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">fromDateInSearchSectionInterval</stringProp>
@@ -343,28 +345,28 @@
               </elementProp>
               <elementProp name="toDateInSearchHour" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                <stringProp name="Argument.value">${yesterday}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">toDateInSearchHour</stringProp>
               </elementProp>
               <elementProp name="toDateInSearchInterval" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                <stringProp name="Argument.value">${yesterday}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">toDateInSearchInterval</stringProp>
               </elementProp>
               <elementProp name="toDateInSearchPeriod" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                <stringProp name="Argument.value">${yesterday}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">toDateInSearchPeriod</stringProp>
               </elementProp>
               <elementProp name="toDateInSearchSectionInterval" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                <stringProp name="Argument.value">${yesterday}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">toDateInSearchSectionInterval</stringProp>
@@ -536,28 +538,28 @@
                 </elementProp>
                 <elementProp name="fromDateInSearchHour" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">fromDateInSearchHour</stringProp>
                 </elementProp>
                 <elementProp name="fromDateInSearchInterval" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">fromDateInSearchInterval</stringProp>
                 </elementProp>
                 <elementProp name="fromDateInSearchPeriod" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">fromDateInSearchPeriod</stringProp>
                 </elementProp>
                 <elementProp name="fromDateInSearchSectionInterval" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">fromDateInSearchSectionInterval</stringProp>
@@ -690,28 +692,28 @@
                 </elementProp>
                 <elementProp name="toDateInSearchHour" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">toDateInSearchHour</stringProp>
                 </elementProp>
                 <elementProp name="toDateInSearchInterval" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">toDateInSearchInterval</stringProp>
                 </elementProp>
                 <elementProp name="toDateInSearchPeriod" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">toDateInSearchPeriod</stringProp>
                 </elementProp>
                 <elementProp name="toDateInSearchSectionInterval" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">toDateInSearchSectionInterval</stringProp>
@@ -884,28 +886,28 @@
                 </elementProp>
                 <elementProp name="fromDateInSearchHour" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">fromDateInSearchHour</stringProp>
                 </elementProp>
                 <elementProp name="fromDateInSearchInterval" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">fromDateInSearchInterval</stringProp>
                 </elementProp>
                 <elementProp name="fromDateInSearchPeriod" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">fromDateInSearchPeriod</stringProp>
                 </elementProp>
                 <elementProp name="fromDateInSearchSectionInterval" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">fromDateInSearchSectionInterval</stringProp>
@@ -1038,28 +1040,28 @@
                 </elementProp>
                 <elementProp name="toDateInSearchHour" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">toDateInSearchHour</stringProp>
                 </elementProp>
                 <elementProp name="toDateInSearchInterval" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">toDateInSearchInterval</stringProp>
                 </elementProp>
                 <elementProp name="toDateInSearchPeriod" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">toDateInSearchPeriod</stringProp>
                 </elementProp>
                 <elementProp name="toDateInSearchSectionInterval" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyyMMdd)}</stringProp>
+                  <stringProp name="Argument.value">${yesterday}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">toDateInSearchSectionInterval</stringProp>
